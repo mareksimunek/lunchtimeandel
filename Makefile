@@ -70,6 +70,6 @@ watch:
 
 install-dependencies:
 	apt-get install mongodb curl openjdk-7-jre
-	curl https://npmjs.org/install.sh | bash
+	curl -O -L https://npmjs.org/install.sh | bash
 	npm install
-	npm install forever supervisor mocha -g
+	npm install forever supervisor mocha coffeescript@1.12.7 -g
