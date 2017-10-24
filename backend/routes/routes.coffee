@@ -10,13 +10,13 @@ module.exports = (app) ->
     app.get '/', (req, res) ->
         models.Restaurant.find {}, (err, restaurants) ->
             res.render 'home.jade',
-                title: __('LunchtimeAndel')
+                title: __('LunchtimePlzen')
                 restaurants: restaurants
 
     # /reloaddata is working only in dev.
     app.get '/reloaddata', (req, res) ->
         host = req.header 'host'
-        if host.match /^(127\..*|192\..*|dev)/i
+        if host.match /^(127\..*|192\..*|dev|localhost)/i
             res.send 'Reloading...'
             require('../lunchmenuloader')()
         else

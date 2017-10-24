@@ -10,5 +10,6 @@
 	"Loading…": "Načítání…",
 	"For properly function, please, allow JavaScript for this site.": "Pro správnou funkčnost, prosím, povolte JavaScript.",
 	"I would appreciate any tip (you know – servers and domains are not cheap…) Thank you!": "Ocením jakékoliv dýško (víš – servery a domény nejsou zrovna levná záležitost…) Díky!",
-	"Show selection": "Zobrazit výběr"
+	"Show selection": "Zobrazit výběr",
+	"LunchtimePlzen": "LunchtimePlzen"
 }
