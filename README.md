@@ -1,6 +1,8 @@
 # Setup
 `git clone  --recursive -j4 https://github.com/mareksimunek/lunchtimeandel.git`
+
 `docker build -t lunchtime .`
+
 `docker run -p 3000:3000 lunchtime`
 
 # LunchTimeAnděl
