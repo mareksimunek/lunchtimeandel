@@ -1,5 +1,4 @@
-
-# LunchTimeRoudna
+# LunchTimeAnděl
 
 At work we wanted some app which tell us where to go to lunch. After some time I wanted to try node.js and so I opened editor and started to write this web app.
 
