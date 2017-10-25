@@ -1,3 +1,8 @@
+# Setup
+`git clone  --recursive -j4 https://github.com/mareksimunek/lunchtimeandel.git`
+`docker build -t lunchtime .`
+`docker run -p 3000:3000 lunchtime`
+
 # LunchTimeAnděl
 
 At work we wanted some app which tell us where to go to lunch. After some time I wanted to try node.js and so I opened editor and started to write this web app.
