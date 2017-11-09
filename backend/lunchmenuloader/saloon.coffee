@@ -4,7 +4,7 @@ LunchmenuLoader = require './lunchmenuLoader'
 
 class SaloonlLoader extends LunchmenuLoader
     constructor: () ->
-        @name = 'Saloon Rounda'
+        @name = 'Saloon Roudná'
         @homepage = 'http://saloonroudna.cz/'
         @downloadUrl = 'http://saloonroudna.cz/'
         @phoneNumber = ''

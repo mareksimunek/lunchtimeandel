@@ -4,7 +4,7 @@ LunchmenuLoader = require './lunchmenuLoader'
 
 class Salzmani extends LunchmenuLoader
     constructor: () ->
-        @name = 'U Salzmanu'
+        @name = 'U Salzmannů'
         @homepage = ''
         @downloadUrl = 'http://www.usalzmannu.com/cz/denni-nabidka/'
         @phoneNumber = '+420 251 511 490'
