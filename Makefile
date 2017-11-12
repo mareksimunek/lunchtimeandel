@@ -16,6 +16,8 @@ all:
 	@echo "make watch"
 	@echo "make install-dependencies"
 
+runProd : comp-coff
+	node backend/lunchtime.js
 run: compile-coffeescript
 	# Make sure that nothing is running on port $(PORT).
 	$(eval pid := `lsof -i tcp:$(PORT) | grep LISTEN | cut -d" " -f2`)
@@ -32,6 +34,8 @@ test:
 compile: compile-coffeescript compile-templates compile-javascript
 compile-coffeescript:
 	coffee -cb ./backend ./frontend ./tests
+comp-coff:
+	./node_modules/coffee-script/bin/coffee -cb ./backend ./frontend
 compile-templates:
 	java -jar $(SOY_COMPILER) \
 	    --shouldProvideRequireSoyNamespaces \
