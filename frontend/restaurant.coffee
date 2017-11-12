@@ -28,12 +28,6 @@ class lta.Restaurant
     contentElm: null
 
     ###*
-    @type {google.maps.Marker}
-    @private
-    ###
-    mapMarker: null
-
-    ###*
     @type {boolean}
     @private
     ###
@@ -232,29 +226,6 @@ class lta.Restaurant
     hide: () ->
         @showHide false
 
-    ###*
-    @param {boolean} show
-    @private
-    ###
-    showHide: (show) ->
-        goog.dom.classes.enable @contentElm, 'hide', !show
-        @mapMarker.setVisible show if @mapMarker
-
-    ###*
-    @param {google.maps.Map} googleMap
-    ###
-    registerMapMarker: (googleMap) ->
-        that = @
-        @mapMarker = new google.maps.Marker
-            'map': googleMap
-            'title': @data['name']
-            'position': new google.maps.LatLng @data['address']['map']['lat'], @data['address']['map']['lng']
-            'icon': @getDefaultMarkerIconUrl()
-        google.maps.event.addListener @mapMarker, 'click', () ->
-            that.scrollTo()
-            that.mark()
-            that.restaurants.history.setToken that.getId()
-
     scrollTo: () ->
         lta.smoothlyScrollTo @contentElm.offsetTop
 
@@ -289,9 +260,3 @@ class lta.Restaurant
         else
             @getMarkerIconUrl 'gray'
 
-    ###*
-    @param {string} color
-    @private
-    ###
-    getMarkerIconUrl: (color) ->
-        'https://www.lunchtimeandel.cz/images/gmap/mm_20_' + color + '.png'

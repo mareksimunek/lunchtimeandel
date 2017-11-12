@@ -11,17 +11,21 @@ block list
             i.icon-filter
             span &nbsp;
             span #{__i('Show selection')}
-    div#restaurants_map.hidden-xs.hidden-sm
+    
 
 block content
-    div#restaurants
-        div#favorite-restaurants
-        div#common-restaurants
-            script.
-                document.write("#{__i('Loading…')}");
-            noscript
-                p.label.label-important #{__i('For properly function, please, allow JavaScript for this site.')}
-        div#hidden-restaurants
+    div.row
+        div#restaurants.col-md-6
+            div#common-restaurants
+                script.
+                    document.write("#{__i('Loading…')}");
+                noscript
+                    p.label.label-important #{__i('For properly function, please, allow JavaScript for this site.')}
+            div#hidden-restaurants
+        div.col-md-6
+            h2 Oblíbené restaurace:
+            div#favorite-restaurants
+
 
     i#choicehelp-link.icon-meh
     div#choicehelp-box.alert.hide
@@ -31,15 +35,7 @@ block content
 
 block end
     script(type='text/javascript').
-        var mapOptions = {
-            center: new google.maps.LatLng(49.749724,13.378475),
-            minZoom: 15,
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            disableDefaultUI: true,
-            disableDoubleClickZoom: true
-        };
-        var restaurants = new lta.Restaurants(mapOptions);
+        var restaurants = new lta.Restaurants(null);
         restaurants.load();
         new lta.ChoiceHelp();
         new lta.Search('search', restaurants)

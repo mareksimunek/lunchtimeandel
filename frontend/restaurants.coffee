@@ -14,11 +14,6 @@ class lta.Restaurants
     ###
     restaurants: []
 
-    ###*
-    @type {google.maps.Map}
-    @private
-    ###
-    googleMap: null
 
     ###*
     @type {Element}
@@ -42,19 +37,9 @@ class lta.Restaurants
     ###
     constructor: (mapOptions) ->
         @container = goog.dom.getElement 'restaurants'
-        @createGoogleMap mapOptions
         @constructHistory()
         @initBtnSelection()
 
-    ###*
-    @private
-    ###
-    createGoogleMap: (mapOptions) ->
-        # Mobile is without map. Better for time execution and data needed to be downloaded.
-        if goog.userAgent.MOBILE
-            return
-        elm = goog.dom.getElement 'restaurants_map'
-        @googleMap = new google.maps.Map elm, mapOptions
 
     ###*
     @private
@@ -102,7 +87,6 @@ class lta.Restaurants
             for restaurantData in res
                 restaurant = new lta.Restaurant that, restaurantData
                 restaurant.appendToDocument()
-                restaurant.registerMapMarker that.googleMap if that.googleMap
                 that.restaurants.push restaurant
 
             for restaurant in that.restaurants

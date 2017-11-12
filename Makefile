@@ -58,7 +58,6 @@ compile-javascript:
 	    --input="frontend/search.js" \
 	    --input="frontend/api.js" \
 	    --compiler_flags="--translations_file=frontend/templates/messages.xtb" \
-	    --compiler_flags="--externs=frontend/externs/googlemapsv3.js" \
 	    --compiler_flags="--warning_level=VERBOSE" \
 	    --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS" \
 	    > public/app.min.js;
