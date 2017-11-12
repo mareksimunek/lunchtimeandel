@@ -10,3 +10,4 @@ module.exports = () ->
         (new (require './salzmani')).loadData()
         (new (require './comix')).loadData()
         (new (require './beerFactory')).loadData()
+        (new (require './buffaloBurger')).loadData()
