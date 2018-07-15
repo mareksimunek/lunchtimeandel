@@ -1,11 +1,11 @@
 LunchmenuLoader = require './lunchmenuLoader'
 moment = require 'moment'
 
-class BuffaloBurger extends LunchmenuLoader
+class MalickaBrana extends LunchmenuLoader
     constructor: () ->
-        @name = 'Buffalo Burger Bar'
-        @homepage = 'https://www.buffaloburger.cz/#tydenni'
-        @downloadUrl = 'https://www.menicka.cz/4280-buffalo-burger-bar.html'
+        @name = 'U Malické Brány'
+        @homepage = 'http://www.umalickebrany.cz/tydenni-nabidka/'
+        @downloadUrl = 'https://www.menicka.cz/1631-u-malicke-brany.html'
         @phoneNumber = ''
         @charset = 'CP1250'
         @address =
@@ -22,4 +22,4 @@ class BuffaloBurger extends LunchmenuLoader
 
 
 
-module.exports = BuffaloBurger
+module.exports = MalickaBrana
